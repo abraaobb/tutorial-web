@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title>New book</mat-card-title>
+  <form>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput type="text" maxlength="128" name="title" [(ngModel)]="book.title">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Publication date</mat-label>
+      <input matInput type="date" name="publication_date" [(ngModel)]="book.publication_date">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Author</mat-label>
+      <input matInput type="text" maxlength="128" name="author" [(ngModel)]="book.author">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="createBook()" color="primary">Salvar</button>
+  <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>
